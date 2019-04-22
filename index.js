@@ -22,6 +22,8 @@ io.sockets.on('connection',function(socket){
   });
 });
 
-const server = http.listen(3000,function(){
+var port = var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
+
+const server = http.listen(port,function(){
   console.log('listening on *:3000');
 });
